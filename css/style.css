@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(208, 255, 239);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#start-game {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px #999;
+}
+
+#start-game:hover {
+    background-color: #45a049;
+}
+
+#start-game:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.main-game {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genius {
+    display: grid;
+    grid-template-areas: 'verde vermelho' 'amarelo azul';
+    grid-gap: 10px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 100%;
+    width: 700px;
+    height: 700px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Sombra para efeito 3D */
+}
+
+.blue {
+    grid-area: azul;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+.red {
+    grid-area: vermelho;
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.yellow {
+    grid-area: amarelo;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+.green {
+    grid-area: verde;
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.selected {
+    opacity: 0.8;
+}
+
+.image-container {
+    position: fixed;
+    right: 10px; /* Ajuste conforme necessário para afastar da barra de rolagem */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px; /* ou ajuste conforme a largura desejada das imagens */
+    background-color: rgb(145, 223, 197); /* ajuste para a cor de fundo desejada */
+    padding: 10px; /* Adiciona espaço dentro do container, em torno das imagens */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* opcional, para sombra suave em torno das imagens */
+}
+
+.image-container img {
+    width: 100%;
+    display: block; /* remove espaços abaixo das imagens */
+    margin-bottom: 10px; /* espaço entre imagens, se necessário */
+}
+
+#stop-game {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f44336; /* Vermelho para distinção */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px #999;
+    margin-top: 10px;
+}
+
+#stop-game:hover {
+    background-color: #d32f2f;
+}
+
+#stop-game:active {
+    background-color: #c62828;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.scoreboard {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.scoreboard h3 {
+    margin-top: 0;
+}
+
+.scoreboard p {
+    margin: 5px 0;
+}
