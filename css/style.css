@@ -1,57 +1,64 @@
+/* Estilo básico do corpo do documento, define a cor de fundo, alinhamento e posicionamento dos elementos */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(208, 255, 239);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    background-color: rgb(208, 255, 239); /* Define a cor de fundo do corpo */
+    display: flex; /* Utiliza Flexbox para alinhar elementos */
+    flex-direction: column; /* Organiza os filhos do Flexbox em coluna */
+    align-items: center; /* Centraliza horizontalmente os filhos no Flexbox */
+    justify-content: center; /* Centraliza verticalmente os filhos no Flexbox */
+    min-height: 100vh; /* Garante que o corpo ocupe no mínimo a altura total da viewport */
 }
 
+/* Estilos para o cabeçalho da página */
 header {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto dentro do cabeçalho */
+    margin-bottom: 20px; /* Adiciona uma margem abaixo do cabeçalho */
 }
 
+/* Estilos para o botão de iniciar jogo */
 #start-game {
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px #999;
+    padding: 10px 20px; /* Define o padding interno do botão */
+    font-size: 20px; /* Tamanho da fonte do texto dentro do botão */
+    cursor: pointer; /* Muda o cursor para indicar que o elemento é clicável */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto dentro do botão */
+    border: none; /* Remove as bordas do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    box-shadow: 0 4px #999; /* Sombra para efeito 3D abaixo do botão */
 }
 
+/* Estilos para o botão de iniciar jogo ao passar o mouse */
 #start-game:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Escurece a cor de fundo do botão ao passar o mouse */
 }
 
+/* Estilos para o botão de iniciar jogo ao clicar */
 #start-game:active {
-    background-color: #3e8e41;
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
+    background-color: #3e8e41; /* Escurece ainda mais a cor de fundo ao clicar */
+    box-shadow: 0 2px #666; /* Sombra mais próxima do botão para efeito de pressionado */
+    transform: translateY(2px); /* Desloca o botão para baixo ao clicar */
 }
 
+/* Estilos para a área principal do jogo */
 .main-game {
-    height: 80vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 80vh; /* Define a altura como 80% da altura da viewport */
+    width: 100vw; /* Define a largura como 100% da largura da viewport */
+    display: flex; /* Utiliza Flexbox para alinhar elementos */
+    justify-content: center; /* Centraliza horizontalmente os filhos no Flexbox */
+    align-items: center; /* Centraliza verticalmente os filhos no Flexbox */
 }
 
+/* Estilos para o container do jogo Genius */
 .genius {
-    display: grid;
-    grid-template-areas: 'verde vermelho' 'amarelo azul';
-    grid-gap: 10px;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
-    border-radius: 100%;
-    width: 700px;
-    height: 700px;
+    display: grid; /* Utiliza Grid para posicionar os quadrantes de cores */
+    grid-template-areas: 'verde vermelho' 'amarelo azul'; /* Define áreas do grid para cada cor */
+    grid-gap: 10px; /* Espaçamento entre as áreas do grid */
+    border: 1px solid #ffffff; /* Borda branca ao redor do container */
+    background-color: #ffffff; /* Cor de fundo branca para o container */
+    border-radius: 100%; /* Formato circular do container */
+    width: 700px; /* Largura fixa do container */
+    height: 700px; /* Altura fixa do container */
     box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Sombra para efeito 3D */
 }
 
@@ -79,63 +86,72 @@ header {
     border-top-left-radius: 100%;
 }
 
+/* Estilos para quando uma cor é selecionada */
 .selected {
-    opacity: 0.8;
+    opacity: 0.8; /* Torna a cor um pouco transparente quando selecionada */
 }
 
+/* Estilos para o container das imagens */
 .image-container {
-    position: fixed;
-    right: 10px; /* Ajuste conforme necessário para afastar da barra de rolagem */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px; /* ou ajuste conforme a largura desejada das imagens */
-    background-color: rgb(145, 223, 197); /* ajuste para a cor de fundo desejada */
-    padding: 10px; /* Adiciona espaço dentro do container, em torno das imagens */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* opcional, para sombra suave em torno das imagens */
+    position: fixed; /* Posicionamento fixo na tela */
+    right: 10px; /* Afasta da borda direita da tela */
+    top: 50%; /* Posiciona no centro vertical da tela */
+    transform: translateY(-50%); /* Ajuste para centralizar verticalmente */
+    width: 200px; /* Largura fixa para as imagens */
+    background-color: rgb(145, 223, 197); /* Cor de fundo para o container */
+    padding: 10px; /* Espaçamento interno ao redor das imagens */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra suave ao redor do container */
 }
 
+/* Estilos para cada imagem dentro do container */
 .image-container img {
-    width: 100%;
-    display: block; /* remove espaços abaixo das imagens */
-    margin-bottom: 10px; /* espaço entre imagens, se necessário */
+    width: 100%; /* As imagens ocupam 100% da largura do container */
+    display: block; /* Remove espaços abaixo das imagens, garantindo que elas sejam exibidas em bloco */
+    margin-bottom: 10px; /* Espaço entre as imagens */
 }
 
+/* Estilos para o botão de parar e reiniciar jogo */
 #stop-game {
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #f44336; /* Vermelho para distinção */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px #999;
-    margin-top: 10px;
+    padding: 10px 20px; /* Define o padding interno do botão */
+    font-size: 20px; /* Tamanho da fonte do texto dentro do botão */
+    cursor: pointer; /* Muda o cursor para indicar que o elemento é clicável */
+    background-color: #f44336; /* Cor de fundo do botão para distinção */
+    color: white; /* Cor do texto dentro do botão */
+    border: none; /* Remove as bordas do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    box-shadow: 0 4px #999; /* Sombra para efeito 3D abaixo do botão */
+    margin-top: 10px; /* Margem acima do botão para separar do botão de iniciar */
 }
 
+/* Estilos para o botão de parar e reiniciar jogo ao passar o mouse */
 #stop-game:hover {
-    background-color: #d32f2f;
+    background-color: #d32f2f; /* Escurece a cor de fundo do botão ao passar o mouse */
 }
 
+/* Estilos para o botão de parar e reiniciar jogo ao clicar */
 #stop-game:active {
-    background-color: #c62828;
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
+    background-color: #c62828; /* Escurece ainda mais a cor de fundo ao clicar */
+    box-shadow: 0 2px #666; /* Sombra mais próxima do botão para efeito de pressionado */
+    transform: translateY(2px); /* Desloca o botão para baixo ao clicar */
 }
 
+/* Estilos para o placar fixo na tela */
 .scoreboard {
-    position: fixed;
-    left: 20px;
-    top: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed; /* Posicionamento fixo na tela */
+    left: 20px; /* Afasta da borda esquerda da tela */
+    top: 20px; /* Afasta do topo da tela */
+    background: rgba(255, 255, 255, 0.9); /* Cor de fundo semi-transparente */
+    padding: 10px; /* Espaçamento interno ao redor do conteúdo do placar */
+    border-radius: 10px; /* Arredonda os cantos do placar */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave ao redor do placar */
 }
 
+/* Estilos para o título dentro do placar */
 .scoreboard h3 {
-    margin-top: 0;
+    margin-top: 0; /* Remove a margem superior do título para alinhar melhor dentro do placar */
 }
 
+/* Estilos para os parágrafos dentro do placar */
 .scoreboard p {
-    margin: 5px 0;
+    margin: 5px 0; /* Define uma pequena margem vertical para separar os textos dentro do placar */
 }

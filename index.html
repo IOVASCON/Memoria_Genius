@@ -1,44 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/image2.ico" type="image/x-icon">
-    <title>Genesis</title>
+<!DOCTYPE html> <!-- Declara que este documento é um HTML5 -->
+<html lang="pt-BR"> <!-- Inicia o documento HTML, especificando o idioma como Português do Brasil -->
+
+<head> <!-- Inicia a cabeça do documento que contém metadados -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para ser responsiva e se adaptar a dispositivos móveis -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Link para a folha de estilos CSS externa -->
+    <link rel="icon" href="img/image2.ico" type="image/x-icon"> <!-- Define o favicon para a aba do navegador -->
+    <title>Genesis</title> <!-- Título da página, que aparece na aba do navegador -->
 </head>
 
-<body>
-    <header>
-        <h1>Bem-vindo ao Jogo GENIUS!</h1>
-        <p>Tente memorizar e repetir a sequência de cores. Clique no botão abaixo para começar!</p>
-        <button id="start-game">Iniciar Jogo</button>
-        <button id="stop-game">Parar e Reiniciar o Jogo</button>
+<body> <!-- Inicia o corpo do documento, onde o conteúdo visível da página é colocado -->
+    <header> <!-- Cabeçalho da página -->
+        <h1>Bem-vindo ao Jogo GENIUS!</h1> <!-- Título principal da página -->
+        <p>Tente memorizar e repetir a sequência de cores. Clique no botão abaixo para começar!</p> <!-- Parágrafo com descrição/instruções -->
+        <button id="start-game">Iniciar Jogo</button> <!-- Botão para iniciar o jogo -->
+        <button id="stop-game">Parar e Reiniciar o Jogo</button> <!-- Botão para parar e reiniciar o jogo -->
     </header>
-    <div class="main-game">
-        <div class="genius">
-            <div class="blue"></div>
-            <div class="yellow"></div>
-            <div class="red"></div>
-            <div class="green"></div>
+    <div class="main-game"> <!-- Divisão principal do jogo -->
+        <div class="genius"> <!-- Container do jogo Genius com quadrantes de cores -->
+            <div class="blue"></div> <!-- Quadrante azul -->
+            <div class="yellow"></div> <!-- Quadrante amarelo -->
+            <div class="red"></div> <!-- Quadrante vermelho -->
+            <div class="green"></div> <!-- Quadrante verde -->
         </div>
     </div>
 
-    <div> 
-        <div class="image-container">
-            <img src="img/image1.jpeg" alt="Descrição da Imagem 1">
-            <img src="img/image2.jpeg" alt="Descrição da Imagem 2">
-            <img src="img/image3.jpeg" alt="Descrição da Imagem 3">
+    <div> <!-- Divisão para imagens adicionais -->
+        <div class="image-container"> <!-- Container para imagens -->
+            <img src="img/image1.jpeg" alt="Descrição da Imagem 1"> <!-- Imagem 1 com descrição alternativa -->
+            <img src="img/image2.jpeg" alt="Descrição da Imagem 2"> <!-- Imagem 2 com descrição alternativa -->
+            <img src="img/image3.jpeg" alt="Descrição da Imagem 3"> <!-- Imagem 3 com descrição alternativa -->
             <!-- Adicione mais tags <img> conforme necessário para outras imagens -->
         </div>
     </div>
 
-    <div class="scoreboard">
-        <h3>Pontuação</h3>
-        <p id="hits">Acertos: 0</p>
-        <p id="misses">Erros: 0</p>
+    <div class="scoreboard"> <!-- Divisão para o placar do jogo -->
+        <h3>Pontuação</h3> <!-- Título do placar -->
+        <p id="hits">Acertos: 0</p> <!-- Exibe o número de acertos -->
+        <p id="misses">Erros: 0</p> <!-- Exibe o número de erros -->
     </div>
     
-    <script type="text/javascript" src="js/script.js" defer></script>
+    <script type="text/javascript" src="js/script.js" defer></script> <!-- Script externo do jogo com o atributo defer para garantir que seja carregado após o HTML -->
 </body>
 </html>
